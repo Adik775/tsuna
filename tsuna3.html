@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 8px 12px;
+            transition: background-color 0.2s, color 0.2s;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #0d6efd;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .text-block {
+            flex: 1 1 45%;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .images-block {
+            flex: 1 1 45%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .images-block img {
+            width: 48%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .images-block img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+            .text-block, .images-block {
+                flex: 1 1 100%;
+            }
+            .images-block img {
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MEGA SPORT</h1>
+        <nav>
+            <ul>
+                <li><a href="tsuna.html">Главная</a></li>
+                <li><a href="tsuna3.html">О нас</a></li>
+                <li><a href="tsuna4.html">Контакты</a></li>
+                <li><a href="tsuna5.html">Профиль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>О нас</h2>
+        <div class="about-section">
+            <div class="text-block">
+                <p>Магазин <strong>Mega Sport</strong> — это ваш надежный партнер в мире спортивных товаров. Мы предлагаем широкий ассортимент качественной экипировки, обуви и аксессуаров для всех видов спорта и активного отдыха.</p>
+                <p>Наша миссия — вдохновлять людей вести активный образ жизни, предоставляя только проверенные и современные товары от ведущих брендов. В магазине <strong>Mega Sport</strong> каждый сможет найти всё необходимое для достижения своих спортивных целей.</p>
+                <p>Мы ценим каждого клиента и стремимся обеспечить высокий уровень сервиса и индивидуальный подход. Добро пожаловать в наш магазин — место, где спорт начинается с качественного оборудования!</p>
+            </div>
+            <div class="images-block">
+                <img src="мега.jpg" alt="Спорт" />
+                <img src="спорт.jpeg" alt="Фитнес" />
+                <img src="hatha-yoga1.jpg" alt="Тренировка" />
+                <img src="erasmus-plus-sport.jpg" alt="Спортзал" />
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Спортивный магазин Mega Sport. Все права защищены.</p>
+        <p>Контакты: info@megasport.ru | Телефон: +7 495 123 45 67</p>
+    </footer>
+</body>
+</html>

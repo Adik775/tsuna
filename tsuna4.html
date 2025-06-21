@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Контакты - Спортивный магазин</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    header {
+        background-color: #0d6efd; 
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #0d6efd;
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .map {
+        flex: 1 1 300px;
+        min-width: 300px;
+    }
+
+    .map img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+    }
+
+    .info {
+        flex: 1 1 300px;
+        min-width: 300px;
+    }
+
+    .info h3 {
+        color: #0d6efd;
+        margin-bottom: 15px;
+    }
+
+    .info p {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+
+
+    .info p span {
+        font-weight: bold;
+        color: #0d6efd;
+    }
+
+    @media(max-width: 768px) {
+        .contacts {
+            flex-direction: column;
+        }
+    }
+
+    footer {
+        background-color: #222;
+        color: #ccc;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.9em;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>MEGA SPORT</h1>
+    <nav>
+        <a href="tsuna.html">Главная</a>
+        <a href="tsuna3.html">О нас</a>
+        <a href="tsuna4.html">Контакты</a>
+        <a href="tsuna5.html">Профиль</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Контакты</h2>
+    <div class="contacts">
+        <div class="map">
+            <img src="000.jpg" alt="Расположение магазина" />
+        </div>
+        <div class="info">
+            <h3>Наши контакты</h3>
+            <p><span>Адрес:</span> г. Москва, ул. Спортсменов, д.10, офис 5</p>
+            <p><span>Дни работы:</span> Понедельник - Пятница: 10:00 - 20:00<br>Суббота - Воскресенье: 11:00 - 18:00</p>
+            <p><span>Телефон:</span> +7 495 123 45 67</p>
+            <p><span>Email:</span> info@sportshop.ru</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Спортивный магазин. Все права защищены.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+            header {
+        background-color: #0d6efd;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+   
+    .profile-section {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .profile-section h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #0d6efd;
+        text-align: center;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .profile-value {
+        font-size: 1em;
+        color: #555;
+    }
+
+    
+    .edit-btn {
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.2s;
+    }
+
+    .edit-btn:hover {
+        background-color: #0856b9;
+    }
+
+    
+    .edit-form {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .edit-form.visible {
+        display: flex;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    
+    .form-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .save-btn, .cancel-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.2s;
+    }
+
+    .save-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .save-btn:hover {
+        background-color: #218838;
+    }
+
+    .cancel-btn {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .cancel-btn:hover {
+        background-color: #c82333;
+    }
+
+    footer {
+        background-color: #222;
+        color: #ccc;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+        .profile-section {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+    <h1>MEGA SPORT</h1>
+    <nav>
+        <a href="tsuna.html">Главная</a>
+        <a href="tsuna3.html">О нас</a>
+        <a href="tsuna4.html">Контакты</a>
+        <a href="tsuna5.html">Профиль</a>
+    </nav>
+</header>
+    <div class="container">
+    <div class="profile-section">
+        <h2>Профиль пользователя</h2>
+        <div class="profile-info" id="profile-info">
+            <div class="profile-item">
+                <div class="profile-label">Имя:</div>
+                <div class="profile-value" id="name">Иван Иванов</div>
+            </div>
+            <div class="profile-item">
+                <div class="profile-label">Email:</div>
+                <div class="profile-value" id="email">ivan@example.com</div>
+            </div>
+            <div class="profile-item">
+                <div class="profile-label">Телефон:</div>
+                <div class="profile-value" id="phone">+7 912 345 67 89</div>
+            </div>
+            <div class="profile-item">
+                <div class="profile-label">Адрес:</div>
+                <div class="profile-value" id="address">г. Москва, ул. Ленина, д. 10</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="edit-btn" onclick="toggleEdit()">Редактировать профиль</button>
+        </div>
+
+    
+        <div class="edit-form" id="edit-form">
+            <div class="form-group">
+                <label for="edit-name">Имя:</label>
+                <input type="text" id="edit-name" />
+            </div>
+            <div class="form-group">
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" />
+            </div>
+            <div class="form-group">
+                <label for="edit-phone">Телефон:</label>
+                <input type="tel" id="edit-phone" />
+            </div>
+            <div class="form-group">
+                <label for="edit-address">Адрес:</label>
+                <input type="text" id="edit-address" />
+            </div>
+            <div class="form-buttons" style="justify-content: center;">
+                <button class="save-btn" onclick="saveProfile()">Сохранить</button>
+                <button class="cancel-btn" onclick="toggleEdit()">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Спортивный магазин. Все права защищены.</p>
+    <p>Контакты: info@sportshop.ru | Телефон: +7 123 456 78 90</p>
+</footer>
+
+<script>
+    const profileData = {
+        name: "Иван Иванов",
+        email: "ivan@example.com",
+        phone: "+7 912 345 67 89",
+        address: "г. Москва, ул. Ленина, д. 10"
+    };
+
+    const profileValues = {
+        name: document.getElementById('name'),
+        email: document.getElementById('email'),
+        phone: document.getElementById('phone'),
+        address: document.getElementById('address')
+    };
+
+    const editForm = document.getElementById('edit-form');
+
+    function toggleEdit() {
+        if (editForm.classList.contains('visible')) {
+           
+            editForm.classList.remove('visible');
+        } else {
+            
+            document.getElementById('edit-name').value = profileData.name;
+            document.getElementById('edit-email').value = profileData.email;
+            document.getElementById('edit-phone').value = profileData.phone;
+            document.getElementById('edit-address').value = profileData.address;
+            editForm.classList.add('visible');
+        }
+    }
+
+    function saveProfile() {
+        
+        profileData.name = document.getElementById('edit-name').value;
+        profileData.email = document.getElementById('edit-email').value;
+        profileData.phone = document.getElementById('edit-phone').value;
+        profileData.address = document.getElementById('edit-address').value;
+
+      
+        profileValues.name.textContent = profileData.name;
+        profileValues.email.textContent = profileData.email;
+        profileValues.phone.textContent = profileData.phone;
+        profileValues.address.textContent = profileData.address;
+
+       
+        toggleEdit();
+    }
+</script>
+
+</body>
+</html>
